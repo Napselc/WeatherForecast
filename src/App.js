@@ -8,7 +8,7 @@ const publicDirectoryPath = path.join(__dirname,"../public")
 const partialsPath = path.join(__dirname,"../partials")
 
 const app = express()
-
+const port = process.env.PORT || 3000
 app.set("view engine", "hbs") // setting up the handlenbars template engine
 //const viewsPath = path.join(__dirname, "../templates")
 //app.set("views", viewsPath)           --> if the name "views" is to be changed
@@ -100,6 +100,6 @@ app.get("*", (req, res) => {
         errorMessage: "Page not found"
     })
 })
-app.listen(3000, () => {
-    console.log("Server up at 3000")
+app.listen(port, () => {
+    console.log("Server up at " + port)
 })
