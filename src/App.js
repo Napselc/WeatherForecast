@@ -1,6 +1,7 @@
 const path = require("path")
 const express = require("express")
 const hbs = require("hbs")
+
 const geocode = require("./utils/geocode")
 const forecast = require("./utils/forecast")
 
@@ -8,7 +9,7 @@ const publicDirectoryPath = path.join(__dirname,"../public")
 const partialsPath = path.join(__dirname,"../partials")
 
 const app = express()
-const port = process.env.PORT || 3000
+const port =  3000
 app.set("view engine", "hbs") // setting up the handlenbars template engine
 //const viewsPath = path.join(__dirname, "../templates")
 //app.set("views", viewsPath)           --> if the name "views" is to be changed
