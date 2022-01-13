@@ -9,7 +9,7 @@ const publicDirectoryPath = path.join(__dirname,"../public")
 const partialsPath = path.join(__dirname,"../partials")
 
 const app = express()
-const port =  3000
+const port = process.env.port || 3000
 app.set("view engine", "hbs") // setting up the handlenbars template engine
 //const viewsPath = path.join(__dirname, "../templates")
 //app.set("views", viewsPath)           --> if the name "views" is to be changed
